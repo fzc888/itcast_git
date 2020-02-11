@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="dubbo_common" />
         <module name="dubbo_interface" />
+        <module name="dubbo_provider" />
       </profile>
     </annotationProcessing>
   </component>

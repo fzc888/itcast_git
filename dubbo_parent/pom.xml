@@ -10,6 +10,7 @@
     <modules>
         <module>dubbo_common</module>
         <module>dubbo_interface</module>
+        <module>dubbo_provider</module>
     </modules>
 
     <packaging>pom</packaging>
