@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.itheima.dao.UserDao">
     <!--主键查询,结果集使用别名(user)-->
-    <select id="finById"  parameterType="int" resultType="user">
-        select * from t_user where id=#{id}
+    <select id="findById"  parameterType="int" resultType="user">
+        select * from t_user where id = #{id}
     </select>
 </mapper>

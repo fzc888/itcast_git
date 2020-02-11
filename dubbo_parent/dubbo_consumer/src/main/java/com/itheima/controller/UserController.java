@@ -1,0 +1,23 @@
+package com.itheima.controller;
+
+import com.itheima.pojo.User;
+import com.itheima.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+@ResponseBody//响应jsons数据到页面
+@RequestMapping(value = "/user")
+public class UserController {
+    @Autowired
+    UserService userService;
+
+    //主键查询
+    @RequestMapping(value = "/findById")
+    public User finById(Integer id){
+        User user = userService.findById(id);
+        return user;//以json的方式传递
+    }
+}

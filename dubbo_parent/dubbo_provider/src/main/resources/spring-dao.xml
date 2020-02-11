@@ -11,6 +11,8 @@
        http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx.xsd
 ">
+    <!--加载jdbc.properties文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
     <!--配置数据源-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${jdbc.driver}"></property>
