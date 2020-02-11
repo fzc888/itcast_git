@@ -4,7 +4,9 @@ import com.itheima.dao.UserDao;
 import com.itheima.pojo.User;
 import com.itheima.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
+@Transactional
 public class UserServiceImpl implements UserService {
     @Autowired
     UserDao userDao;
