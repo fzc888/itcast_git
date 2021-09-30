@@ -9,8 +9,17 @@
 
     <!--2.配置dubbo注册中心Zookeeper的地址-->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry>
-    <!--3.配置需要操作的业务接口及实例-->
-    <dubbo:service interface="com.itheima.service.UserService" ref="userService"></dubbo:service>
-    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl"></bean>
 
+    <!--配置Dubbo的协议(dubbo协议,默认端口20880(也可以改))-->
+<!--    <dubbo:protocol name="dubbo" port="20881"></dubbo:protocol>-->
+
+    <!--配置rmi的协议-->
+    <dubbo:protocol name="rmi" port="1099"></dubbo:protocol>
+
+    <!--3.配置需要操作的业务接口及实例-->
+<!--    <dubbo:service interface="com.itheima.service.UserService" ref="userService"></dubbo:service>
+    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl"></bean>-->
+
+    <!--使用dubbo的组件扫描(注解的配置),在Service的实现类上添加@Service,@Service是dubbo的jar报-->
+    <dubbo:annotation package="com.itheima"></dubbo:annotation>
 </beans>

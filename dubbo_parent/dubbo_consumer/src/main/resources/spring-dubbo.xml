@@ -9,7 +9,9 @@
 
     <!--2.配置dubbo注册中心Zookeeper的地址-->
     <dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry>
-    <!--3.配置订阅的业务接口,及其引用,使用id引用Controllerl类中的接口属性名称-->
-    <dubbo:reference interface="com.itheima.service.UserService" id="userService"></dubbo:reference>
+<!--    &lt;!&ndash;3.配置订阅的业务接口,及其引用,使用id引用Controllerl类中的接口属性名称&ndash;&gt;
+    <dubbo:reference interface="com.itheima.service.UserService" id="userService"></dubbo:reference>-->
 
+    <!--使用Dubbo的组件扫描(Dubbo的注解配置)-->
+    <dubbo:annotation package="com.itheima"></dubbo:annotation>
 </beans>
