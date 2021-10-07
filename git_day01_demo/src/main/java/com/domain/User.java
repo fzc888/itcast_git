@@ -1,5 +1,5 @@
 package com.domain;
-//更新User
+//再次修改User
 public class User {
     private Integer id;
     private String name;
